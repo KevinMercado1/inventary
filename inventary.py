@@ -12,7 +12,6 @@ def add_item():
     # I added a variable "i", for controlling the while loop
     i = True
     product = input("Enter the name of product: ")
-    
     while i:
         try:
             quantity = int(input(f"Enter the quantities of items: "))
@@ -63,7 +62,10 @@ total_sum = 0
 #Finally a for loop to call the items and inventory and thus calculate the total of the etire inventory.
 
 for items in inventory:
-    print(f"product: {items['product']}, quantity: {items['quantity']}, price: {items['price']:.2f}, total: {items['total']:.2f}")
+    print( f"product: {items['product']}, "
+        f"quantity: {items['quantity']}, "
+        f"price: {items['price']:.2f}, "
+        f"total: {items['total']:.2f}")
     total_sum += items['total']
 
 print(f"\nHere your voucher: {total_sum:.2f}")
